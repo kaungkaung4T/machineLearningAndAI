@@ -1,11 +1,4 @@
-
-
-
-
-from re import L, T
-from typing import final
 from PIL import Image
-import matplotlib
 import PIL
 
 image = Image.open('Question2/sample.png')
