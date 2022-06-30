@@ -1,10 +1,5 @@
-
-
-
-
 import csv
 from pathlib import Path
-import pandas
 
 
 path = Path("Question1/Dataset")
