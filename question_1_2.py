@@ -33,5 +33,5 @@ for p in path.glob("*.csv"):
     file_name = str(new_path[2])
     file_name = file_name.split(".")
 
-    csv.to_json(r"C:\Users\KaungKaung\Desktop\gw\gw_test\Question1\Dataset" + f"\{file_name[0]}.json", indent=4, orient="index")
+    csv.to_json(r"Question1\Dataset" + f"\{file_name[0]}.json", indent=4, orient="index")
 
