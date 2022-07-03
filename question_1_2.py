@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 import pandas
-
+import json
 
 path = Path("Question1/Dataset")
 index_num = 0
@@ -33,5 +33,12 @@ for p in path.glob("*.csv"):
     file_name = str(new_path[2])
     file_name = file_name.split(".")
 
-    csv.to_json(r"Question1\Dataset" + f"\{file_name[0]}.json", indent=4, orient="index")
+    # if need to save bytes, run this
+    # json = csv.to_json(r"Question1\Dataset" + f"\{file_name[0]}.json", indent=4, orient="index")
+    
+    new_json = csv.to_json(orient="index")
+    with open(r"Question1\Dataset" + f"\{file_name[0]}.json", 'w', encoding='utf-8') as jsonf: 
+        parsed = json.loads(new_json)
+        jsonString = json.dumps(parsed, indent=4)
+        jsonf.write(jsonString)
 
