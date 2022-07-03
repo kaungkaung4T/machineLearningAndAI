@@ -23,5 +23,9 @@ mask.putdata(newImage)
 
 im = Image.composite(im1, background_img, mask)
 
+im = im.crop((512, 512, 1536, 1536)) # left, top, right, bottom
+w, h = im.size
+
+print(w, h)
 
 im.show()
