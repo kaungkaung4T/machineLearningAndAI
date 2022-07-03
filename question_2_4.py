@@ -25,7 +25,11 @@ im = Image.composite(im1, background_img, mask)
 
 im = im.crop((512, 512, 1536, 1536)) # left, top, right, bottom
 w, h = im.size
-
 print(w, h)
 
+
+im = im.rotate(-30)
+print(im.size)
+
+im.save("Question2/result4.jpg")
 im.show()
