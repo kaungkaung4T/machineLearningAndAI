@@ -1,3 +1,5 @@
+# Changed filname to question_2_1.py 
+# because in gw_programming_test.txt, it was question_2_2.py that is same name from Question 2.2.
 from PIL import Image
 import PIL
 
